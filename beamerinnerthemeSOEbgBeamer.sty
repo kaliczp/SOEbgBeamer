@@ -1,0 +1,29 @@
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}[overlay, remember picture]
+    \node[inner sep=0pt,outer sep=0pt,anchor=north east] at (current page.north east)
+         {\includegraphics[width=\the\paperwidth,height=\the\paperheight]{SOEbgBeamer/MagyarBg.png}};
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{SOEbgBeamer}[1][]
+{
+   \begin{tikzpicture}[overlay, remember picture]
+    \node[inner sep=0pt,outer sep=0pt,anchor=north east] at (current page.north east)
+    {\includegraphics[width=\the\paperwidth,height=\the\paperheight]{SOEbgBeamer/MagyarTitleMask.png}};
+   \end{tikzpicture}
+   \vskip6cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.2cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+  \vfill
+}
+
+\mode
+<all>
